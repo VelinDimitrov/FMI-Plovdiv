@@ -52,6 +52,9 @@
             this.button23 = new System.Windows.Forms.Button();
             this.percentBtn = new System.Windows.Forms.Button();
             this.resultBox = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // doubleNumBtn
@@ -156,7 +159,7 @@
             // 
             // multiplicationBtn
             // 
-            this.multiplicationBtn.Location = new System.Drawing.Point(143, 131);
+            this.multiplicationBtn.Location = new System.Drawing.Point(143, 160);
             this.multiplicationBtn.Name = "multiplicationBtn";
             this.multiplicationBtn.Size = new System.Drawing.Size(33, 23);
             this.multiplicationBtn.TabIndex = 14;
@@ -166,9 +169,9 @@
             // 
             // calculateBtn
             // 
-            this.calculateBtn.Location = new System.Drawing.Point(143, 218);
+            this.calculateBtn.Location = new System.Drawing.Point(143, 247);
             this.calculateBtn.Name = "calculateBtn";
-            this.calculateBtn.Size = new System.Drawing.Size(33, 52);
+            this.calculateBtn.Size = new System.Drawing.Size(33, 23);
             this.calculateBtn.TabIndex = 15;
             this.calculateBtn.Text = "=";
             this.calculateBtn.UseVisualStyleBackColor = true;
@@ -186,7 +189,7 @@
             // 
             // additionBtn
             // 
-            this.additionBtn.Location = new System.Drawing.Point(143, 160);
+            this.additionBtn.Location = new System.Drawing.Point(143, 189);
             this.additionBtn.Name = "additionBtn";
             this.additionBtn.Size = new System.Drawing.Size(33, 23);
             this.additionBtn.TabIndex = 17;
@@ -196,7 +199,7 @@
             // 
             // substractBtn
             // 
-            this.substractBtn.Location = new System.Drawing.Point(143, 189);
+            this.substractBtn.Location = new System.Drawing.Point(143, 218);
             this.substractBtn.Name = "substractBtn";
             this.substractBtn.Size = new System.Drawing.Size(33, 23);
             this.substractBtn.TabIndex = 18;
@@ -286,19 +289,57 @@
             // 
             // resultBox
             // 
-            this.resultBox.Location = new System.Drawing.Point(26, 23);
+            this.resultBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.resultBox.Location = new System.Drawing.Point(26, 66);
             this.resultBox.Multiline = true;
             this.resultBox.Name = "resultBox";
             this.resultBox.ReadOnly = true;
-            this.resultBox.Size = new System.Drawing.Size(150, 73);
+            this.resultBox.Size = new System.Drawing.Size(150, 30);
             this.resultBox.TabIndex = 28;
             this.resultBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(143, 131);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "MS";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.memoryBtns);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox2.Location = new System.Drawing.Point(26, 50);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(150, 20);
+            this.textBox2.TabIndex = 31;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(26, 23);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(150, 21);
+            this.textBox1.TabIndex = 29;
+            this.textBox1.Text = global::Calculator.Properties.Settings.Default.mem;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(210, 301);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.percentBtn);
             this.Controls.Add(this.button23);
@@ -356,6 +397,9 @@
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button percentBtn;
         private System.Windows.Forms.TextBox resultBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
