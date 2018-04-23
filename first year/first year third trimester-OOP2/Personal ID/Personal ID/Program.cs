@@ -37,7 +37,7 @@ namespace Personal_ID
             //check for valid length
             if (EGN.Length!=10)
             {
-                Console.WriteLine("Invalid EGN");
+                invalidMsg();
                 return false;
             }
 
@@ -46,10 +46,11 @@ namespace Personal_ID
             int month = EGN[2]-'0';
             if (month>5)
             {
-                Console.WriteLine("Invalid EGN");
+                invalidMsg();
                 return false;
             }
-            
+                        
+
             //set Date
             string birthYear;
             string birthMonth;                
@@ -71,6 +72,12 @@ namespace Personal_ID
             
             string birthDay = EGN.Substring(4,2);
 
+            //check for days >31
+            if (int.Parse(birthDay)>31)
+            {
+                invalidMsg();
+                return false;
+            }
 
             birthDate = $"{birthDay}/{birthMonth}/{birthYear}";
 
@@ -90,5 +97,9 @@ namespace Personal_ID
             return true;
         }
 
+        public static void invalidMsg()
+        {
+            Console.WriteLine("Invalid EGN");
+        }
     }
 }
