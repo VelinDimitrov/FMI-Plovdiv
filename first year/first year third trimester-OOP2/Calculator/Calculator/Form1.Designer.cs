@@ -53,8 +53,8 @@
             this.percentBtn = new System.Windows.Forms.Button();
             this.resultBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.historyBox = new System.Windows.Forms.TextBox();
+            this.memoryBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // doubleNumBtn
@@ -285,11 +285,12 @@
             this.percentBtn.TabIndex = 27;
             this.percentBtn.Text = "%";
             this.percentBtn.UseVisualStyleBackColor = true;
-            this.percentBtn.Click += new System.EventHandler(this.numOperationBtns);
+            this.percentBtn.Click += new System.EventHandler(this.percentBtn_Click);
             // 
             // resultBox
             // 
             this.resultBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.resultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.resultBox.Location = new System.Drawing.Point(26, 66);
             this.resultBox.Multiline = true;
             this.resultBox.Name = "resultBox";
@@ -308,38 +309,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.memoryBtns);
             // 
-            // textBox2
+            // historyBox
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox2.Location = new System.Drawing.Point(26, 50);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 31;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.historyBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.historyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.historyBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.historyBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.historyBox.Location = new System.Drawing.Point(26, 50);
+            this.historyBox.Multiline = true;
+            this.historyBox.Name = "historyBox";
+            this.historyBox.ReadOnly = true;
+            this.historyBox.Size = new System.Drawing.Size(150, 20);
+            this.historyBox.TabIndex = 31;
+            this.historyBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox1
+            // memoryBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(26, 23);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(150, 21);
-            this.textBox1.TabIndex = 29;
-            this.textBox1.Text = global::Calculator.Properties.Settings.Default.mem;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.memoryBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.memoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.memoryBox.Location = new System.Drawing.Point(26, 23);
+            this.memoryBox.Multiline = true;
+            this.memoryBox.Name = "memoryBox";
+            this.memoryBox.ReadOnly = true;
+            this.memoryBox.Size = new System.Drawing.Size(150, 21);
+            this.memoryBox.TabIndex = 29;
+            this.memoryBox.Text = global::Calculator.Properties.Settings.Default.mem;
+            this.memoryBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(210, 301);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.historyBox);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.memoryBox);
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.percentBtn);
             this.Controls.Add(this.button23);
@@ -365,7 +369,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.doubleNumBtn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,9 +401,9 @@
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button percentBtn;
         private System.Windows.Forms.TextBox resultBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox memoryBox;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox historyBox;
     }
 }
 
