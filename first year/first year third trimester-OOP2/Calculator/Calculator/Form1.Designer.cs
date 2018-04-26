@@ -290,6 +290,7 @@
             // resultBox
             // 
             this.resultBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.resultBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.resultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.resultBox.Location = new System.Drawing.Point(26, 66);
             this.resultBox.Multiline = true;
@@ -312,7 +313,7 @@
             // historyBox
             // 
             this.historyBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.historyBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.historyBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.historyBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.historyBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.historyBox.Location = new System.Drawing.Point(26, 50);
@@ -326,7 +327,7 @@
             // memoryBox
             // 
             this.memoryBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.memoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.memoryBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.memoryBox.Location = new System.Drawing.Point(26, 23);
             this.memoryBox.Multiline = true;
             this.memoryBox.Name = "memoryBox";
