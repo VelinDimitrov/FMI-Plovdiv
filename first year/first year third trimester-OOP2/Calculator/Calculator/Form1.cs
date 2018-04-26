@@ -46,7 +46,13 @@ namespace Calculator
                 currentNumber = "";
                 visualizeResult();                                               
             }
-
+            if (isOperationDone && currentNumber.Length!=0)
+            {
+                calculate(new object(), new EventArgs());
+                currentNumber = "";
+                isOperationDone = true;
+                visualizeResult();
+            }
             // set operation
                 Button operationBtn = (Button)sender;
                 string currentOperration = operationBtn.Text.Trim();
@@ -171,7 +177,14 @@ namespace Calculator
         }
         private void visualizeMemory()
         {
-            memoryBox.Text = memory.ToString();
+            if (memory!=0)
+            {
+                memoryBox.Text = memory.ToString();
+            }
+            else
+            {
+                memoryBox.Text = "";
+            }
         }
         private void visualizeCalculatorTextBoxes()
         {

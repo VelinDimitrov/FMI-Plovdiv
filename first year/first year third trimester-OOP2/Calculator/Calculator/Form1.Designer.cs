@@ -328,7 +328,7 @@
             // 
             this.memoryBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.memoryBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.memoryBox.Location = new System.Drawing.Point(26, 23);
+            this.memoryBox.Location = new System.Drawing.Point(26, 31);
             this.memoryBox.Multiline = true;
             this.memoryBox.Name = "memoryBox";
             this.memoryBox.ReadOnly = true;
