@@ -33,6 +33,14 @@ namespace Personal_ID
             //initial set of values
             gender = Gender.None;
             birthDate = "";
+
+            //check for only nums
+            long egnInLong = 0;
+            if (!long.TryParse(EGN,out egnInLong ))
+            {
+                invalidMsg();
+                return false;
+            }
             
             //check for valid length
             if (EGN.Length!=10)
@@ -40,8 +48,32 @@ namespace Personal_ID
                 invalidMsg();
                 return false;
             }
+            //check weight
+            int[] arr = {2,4,8,5,10,9,7,3,6 };
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i]*int.Parse(EGN[i].ToString());
+            }
 
+            int remainder = sum % 11;
+            
+            int controlNumber;
 
+            if (remainder<10)
+            {
+                controlNumber = remainder;
+            }
+            else
+            {
+                controlNumber = 0;
+            }
+            // check the control number if equal to 10-th number
+            if (controlNumber!=int.Parse(EGN[9].ToString()))
+            {
+                invalidMsg();
+                return false;
+            }
             //check before 1900 and after 1999  
             int month = EGN[2]-'0';
             if (month>5)
