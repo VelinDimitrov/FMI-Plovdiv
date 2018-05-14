@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Product_inventory
 {
-    class Product
+   abstract class Product
     {
         private const string NO_BRAND = "Brand missing";
         private decimal price;
