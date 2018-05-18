@@ -43,6 +43,10 @@ namespace Product_inventory
         {
             stock++;
         }
+        public void increaseStock(int additionalStock)
+        {
+            stock+=additionalStock;
+        }
         private string brand;
 
         public string Brand
