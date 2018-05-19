@@ -31,6 +31,7 @@ namespace Product_inventory
             clothesShop.Add(anotherBlueShirt);
             clothesShop.Add(greenShirt);
             clothesShop.Add(anotherGreenShirt);
+            clothesShop.AddStock(anotherGreenShirt, 10);
 
             clothesShop.Add(bluePants);
             clothesShop.Add(yellowPants);
