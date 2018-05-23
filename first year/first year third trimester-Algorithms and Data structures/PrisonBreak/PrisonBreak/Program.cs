@@ -8,7 +8,7 @@ namespace PrisonBreak
 {
     class Program
     {
-        public static readonly int BOARD_SIZE = 15;
+        public static readonly int BOARD_SIZE = 10;
         public static int[,] board;
 
         private static bool foundExit = false;        
