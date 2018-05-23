@@ -38,18 +38,18 @@ namespace zadacha_1
          
         static void fillMatrix(int[,] matrix,int size)
         {
-            int positionX = size / 2; 
-            int positionY = size/2;
+            int positionY = size / 2; 
+            int positionX = size/2;
 
-            int direction = 2; // The initial direction is "up"
-            int stepsCount = 1; // Perform 1 step in current direction
+            int direction = 2; 
+            int stepsCount = 1; // total steps in current direction
             int stepPosition = 0; 
-            int stepChange = 0; // Steps count changes after 2 steps
+            int stepChange = 0;
 
             for (int fillingNum = 0; fillingNum < size * size; fillingNum++)
             {               
-                matrix[positionY, positionX] = fillingNum;
-                // Check for direction / step changes
+                matrix[positionX, positionY] = fillingNum;
+                // Check step changes
                 if (stepPosition < stepsCount)
                 {
                     stepPosition++;
@@ -67,21 +67,21 @@ namespace zadacha_1
                 // move direction
                 switch (direction)
                 {
-                    // right
+                    // down
                     case 0:
-                        positionY++;
-                        break;
-                        //up
-                    case 1:
-                        positionX--;
+                        positionX++;
                         break;
                         //left
-                    case 2:
+                    case 1:
                         positionY--;
                         break;
-                        //down
+                        //up
+                    case 2:
+                        positionX--;
+                        break;
+                        //right
                     case 3:
-                        positionX++;
+                        positionY++;
                         break;
                 }
             }
