@@ -18,7 +18,7 @@ namespace ASD_Square_exercise
                 int[] cordinates = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
                 squares.Add(new Square(cordinates[0], cordinates[1], cordinates[2], cordinates[3]));
             }
-
+            SortSquares(squares);
             findGroupedSquares(squares);
             double sum=0;
             for (int i = 0; i < groupedSquares.Count; i++)
@@ -30,6 +30,21 @@ namespace ASD_Square_exercise
             Console.WriteLine("Number of Groups : "+groupedSquares.Count);
         }
 
+        private static void SortSquares(List<Square> squares)
+        {
+            for (int i = 0; i < squares.Count; i++)
+            {
+                for (int j = i; j < squares.Count; j++)
+                {
+                    if (squares[i].x2 > squares[j].x2)
+                    {
+                        Square temp = squares[i];
+                        squares[i] = squares[j];
+                        squares[j] = temp;
+                    }
+                }
+            }
+        }
         private static void findGroupedSquares(List<Square> squares)
         {
             int currentIndex = 0;
@@ -55,8 +70,7 @@ namespace ASD_Square_exercise
                 {
                     if (i == 1)
                     {
-                        groupedSquares[currentIndex].Add(squares[i - 1]);
-                        currentIndex++;
+                        groupedSquares[currentIndex].Add(squares[i - 1]);                        
                         continue;
                     }
                     currentIndex++;
@@ -67,7 +81,7 @@ namespace ASD_Square_exercise
                 if (i==squares.Count-1&&(xCondition||decreasingYCondition||increasingYCondition))
                 {
                     groupedSquares[currentIndex].Add(squares[i]);
-                }
+                }               
 
             }
         }
