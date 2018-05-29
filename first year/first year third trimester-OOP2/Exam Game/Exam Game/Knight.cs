@@ -8,9 +8,9 @@ namespace Exam_Game
 {
     class Knight : Hero
     {
-        public static int KNIGHT_DEFEND_CHANCE = 20;
-        public static int KNIGHT_INCREASE_ATACK_CHANCE = 10;
-        public static int KNIGHT_BONUS_ATACK_DAMAGE = 2;
+        public static readonly  int KNIGHT_DEFEND_CHANCE = 20;
+        public static readonly int KNIGHT_INCREASE_ATACK_CHANCE = 10;
+        public static readonly int KNIGHT_BONUS_ATACK_DAMAGE = 2;
         public Knight(double hitPoints, double atackPoints, double armorPoints,string name) : base(hitPoints, atackPoints, armorPoints,name)
         {
 

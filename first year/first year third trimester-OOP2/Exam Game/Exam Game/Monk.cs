@@ -8,7 +8,7 @@ namespace Exam_Game
 {
     class Monk : Hero
     {
-        public static int MONK_DEFEND_CHANCE=30;
+        public static readonly int MONK_DEFEND_CHANCE=30;
         public Monk(double hitPoints, double atackPoints, double armorPoints,string name)
             : base(hitPoints, atackPoints, armorPoints,name)
         {

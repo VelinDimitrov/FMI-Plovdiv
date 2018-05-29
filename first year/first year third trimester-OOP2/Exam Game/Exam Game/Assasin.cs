@@ -8,8 +8,8 @@ namespace Exam_Game
 {
     class Assasin : Hero
     {
-        public static int ASSASIN_INCREASE_ATACK_CHANCE = 30;
-        public static int ASSASIN_BONUS_ATACK_DAMAGE = 3;
+        public static readonly int ASSASIN_INCREASE_ATACK_CHANCE = 30;
+        public static readonly int ASSASIN_BONUS_ATACK_DAMAGE = 3;
         public Assasin(double hitPoints, double atackPoints, double armorPoints,string name) : base(hitPoints, atackPoints, armorPoints,name)
         {
 
